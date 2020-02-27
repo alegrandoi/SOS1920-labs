@@ -1,0 +1,48 @@
+    1  cd /workspace/SOS1920-23-labs; clear
+    2  export LANG=en_US.UTF-8;export LANGUAGE=en_US.UTF-8;locale-gen;source ~/.profile; [ ! -f ~/.custom_env ] || source ~/.custom_env; clear;
+    3  cd /workspace/SOS1920-23-labs; clear
+    4  export LANG=en_US.UTF-8;export LANGUAGE=en_US.UTF-8;locale-gen;source ~/.profile; [ ! -f ~/.custom_env ] || source ~/.custom_env; clear;
+    5  cd /workspace/SOS1920-23-labs; clear
+    6  export LANG=en_US.UTF-8;export LANGUAGE=en_US.UTF-8;locale-gen;source ~/.profile; [ ! -f ~/.custom_env ] || source ~/.custom_env; clear;
+    7  cd /workspace/SOS1920-23-labs; clear
+    8  export LANG=en_US.UTF-8;export LANGUAGE=en_US.UTF-8;locale-gen;source ~/.profile; [ ! -f ~/.custom_env ] || source ~/.custom_env; clear;
+    9  cd /workspace/SOS1920-23-labs; clear
+   10  export LANG=en_US.UTF-8;export LANGUAGE=en_US.UTF-8;locale-gen;source ~/.profile; [ ! -f ~/.custom_env ] || source ~/.custom_env; clear;
+   11  cd /workspace/SOS1920-23-labs; clear
+   12  SOS1920-23-labs >> README.md
+   13  echi "# SOS1920-23-labs" >> README.md
+   14  echo "# SOS1920-23-labs" >> README.md
+   15  git init
+   16  ls -la
+   17  git add README.md
+   18  git commit -m "first commit"
+   19  git config --global user.name "alegrandoi"
+   20  git commit -m "first commit"
+   21  git config --global user.email "zzalejandro_3@hotmail.com"
+   22  git commit -m "first commit"
+   23  git remote add origin https://github.com/alegrandoi/SOS1920-labs.git
+   24  git push -u origin master
+   25  git checkout -b l04
+   26  git add.
+   27  git add .
+   28  git commit -m "update md"
+   29  git push
+   30  git push --set-upstream origin l04
+   31  node -v
+   32  npm -v
+   33  npm init 
+   34  ls
+   35  touch index.js
+   36  npm start
+   37  npm install cool-ascii-faces --save
+   38  npm start
+   39  touch .gitignore
+   40  git add .
+   41  git commit -m "created gitignored"
+   42  git push
+   43  git add .
+   44  git commit -m "created gitignored"
+   45  git push
+   46  npm install express --save
+   47  npm start
+   48  history >history.txt
