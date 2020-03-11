@@ -1,12 +1,15 @@
-const cool = require("cool-ascii-faces");
-const express = require("express");
+const exp = require("express");
 
-var app = express();
-
-app.get("/cool",(request,response) => {
-	response.send("<html>"+cool()+"</html>");
+var app = exp();
+var fecha= new Date();
+var hora_actual = fecha.getHours();
+var minu = fecha.getMinutes();
+app.use("/",exp.static("./public"));
+app.get("/time",(request,response)=>{
+	response.send("<html>"+hora_actual+":"+minu+"</html>");
 });
 
-app.listen(80);
-
-console.log("server ready");
+app.listen(80, () =>{
+	console.log("server ready");
+});
+console.log("Starting server...");
