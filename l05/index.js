@@ -1,35 +1,23 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const dataStore = require("nedb");
+const path = require("path");
+const app = express();
+const gretingApi= require(path.join(__dirname,"./gretingAPI"));
 
-var app = express();
-
+const port = process.env.PORT || 80;
 app.use(bodyParser.json());
+const dbFileName = path.join(__dirname,"./contacts.db");
 
-var port = process.env.PORT || 80;
-
-var contacts = [
-	{ 
-		name: "peter",
-		phone: 123456	
-	},
-	{ 
-		name: "pablo",
-		phone: 789456	
-	}
-];
-
-const BASE_API_URL = "/api/v1";
-
-
-
-app.get(BASE_API_URL+"/contacts", (req,res) =>{
-	res.send(JSON.stringify(contacts,null,2));
+const db = new dataStore({
+		filename: dbFileName,
+		autoload: true
 });
 
-app.post(BASE_API_URL+"/contacts",(req,res) =>{
-	contacts.push(req.body); 
-	res.sendStatus(201,"CREATED");
-});
+
+gretingApi(app,db);
+
+
 
 app.listen(port, () => {
 	console.log("Server ready");
